@@ -42,6 +42,7 @@ inoremap <right> <nop>
 nnoremap j gj
 nnoremap k gk
 
+nnoremap <Leader>u :! uglifyjs -mt -o %:r.min.js %<CR><Space>
 nnoremap <Leader>w :w <Bar> !lessc % > %:t:r.css<CR><Space>
 nnoremap <Leader>ff :! firefox %<CR><Space>
 nnoremap <Leader>gc :! google-chrome %<CR><Space>

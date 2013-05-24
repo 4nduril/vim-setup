@@ -54,6 +54,11 @@ Add to `~/.vimrc`:
 
 	let g:syntastic_javascript_checkers=['jshint']
 
+Install [uglify-js](https://github.com/mishoo/UglifyJS2)
+--------------------------------------------------------
+
+	npm install -g uglify-js
+
 Adjust `~/.vimrc`
 -----------------
 
