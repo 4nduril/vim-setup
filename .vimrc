@@ -66,5 +66,5 @@ call pathogen#infect()
 let g:syntastic_check_on_open=1
 let g:syntastic_javascript_checkers=['jshint']
 
-colorscheme molokai
+colorscheme robokai
 hi CursorLine cterm=NONE ctermbg=DarkGray
