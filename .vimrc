@@ -105,6 +105,7 @@ nnoremap <C-l> <C-w>l
 
 " Enable auto completion features for specific languages on file type base.
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType less set omnifunc=csscomplete#CompleteCSS
