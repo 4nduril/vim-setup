@@ -70,6 +70,10 @@ set showmatch
 " Display lines wrapped, when they are too long.
 set wrap
 
+" Enable spellchecking. Set spelllang according to your language.
+set spell 
+set spelllang=de
+
 " Force using h,j,k,l for moving, not allowing arrow keys.
 nnoremap <up> <nop>
 nnoremap <down> <nop>
