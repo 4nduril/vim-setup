@@ -20,6 +20,18 @@ Install html5.vim [othree/html5.vim](https://github.com/othree/html5.vim)
 	cd ~/.vim/bundle
 	git clone git://github.com/othree/html5.vim.git
 
+Install vim-css3-syntax [hail2u/vim-css3-syntax](https://github.com/hail2u/vim-css3-syntax)
+-------------------------------------------------------------------------------------------
+
+	cd ~/.vim/bundle
+	git clone git://github.com/hail2u/vim-css3.syntax.git
+
+Install vim-css-color [skammer/vim-css-color](https://github.com/skammer/vim-css-color)
+-------------------------------------------------------------------------------------------
+
+	cd ~/.vim/bundle
+	git clone git://github.com/hail2u/vim-css-color.git
+
 Install syntastic [scrooloose/syntastic](https://github.com/scrooloose/syntastic)
 ---------------------------------------------------------------------------------
 
@@ -30,6 +42,7 @@ Within VIM type `:Helptags`.
 
 Add to `~/.vimrc`:
 
+	syntax on
 	let g:syntastic_check_on_open=1
 
 Install [{less}](http://lesscss.org)

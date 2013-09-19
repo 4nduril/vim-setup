@@ -74,6 +74,9 @@ set wrap
 set spell 
 set spelllang=de
 
+" Enable syntax checking
+syntax on
+
 " Force using h,j,k,l for moving, not allowing arrow keys.
 nnoremap <up> <nop>
 nnoremap <down> <nop>
@@ -118,7 +121,7 @@ autocmd FileType less set omnifunc=csscomplete#CompleteCSS
 inoremap <Nul> <C-x><C-o>
 
 " Integrate plugin bundles.
-call pathogen#infect()
+execute pathogen#infect()
 
 " Make syntastic plugin check files on opening and saving.
 let g:syntastic_check_on_open=1
