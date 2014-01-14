@@ -117,6 +117,11 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType less set omnifunc=csscomplete#CompleteCSS
 
+" Setting for Latex-Suite
+filetype plugin on
+set grepprg=grep\ -nH\ $*
+let g:tex_flavor='latex'
+
 " Define Ctrl-Space (<Nul>) as shortcut for auto complete.
 inoremap <Nul> <C-x><C-o>
 
