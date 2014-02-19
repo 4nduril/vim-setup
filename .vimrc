@@ -128,6 +128,9 @@ inoremap <Nul> <C-x><C-o>
 " Integrate plugin bundles.
 execute pathogen#infect()
 
+" Remap command from latex-suite so <C-j> will work again
+nnoremap <SID>Anything_maybe_change_it <Plug>IMAP_JumpForward
+
 " Make syntastic plugin check files on opening and saving.
 let g:syntastic_check_on_open=1
 " Use jshint as syntax checker for Javascript.
