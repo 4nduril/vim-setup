@@ -103,6 +103,9 @@ nnoremap <Leader>gc :! google-chrome %<CR><Space>
 " Define shortcuts for window splitting.
 nnoremap <Leader>v :vsplit<Space>
 nnoremap <Leader>h :split<Space>
+" Better split opening
+set splitbelow
+set splitright
 " Define shortcuts for switchng between open split windows. <C- stands for 
 "	Ctrl-
 nnoremap <C-j> <C-w>j
