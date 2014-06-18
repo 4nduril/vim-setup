@@ -100,7 +100,7 @@ nnoremap <Leader>w :w <Bar> !lessc % > %:r.css<CR><Space>
 nnoremap <Leader>ff :! firefox %<CR><Space>
 nnoremap <Leader>gc :! google-chrome %<CR><Space>
 " Compile current LaTeX file in its own directory
-nnoremap <Leader>p :! pdflatex -output-directory %:h %<CR><Space>
+nnoremap <Leader>p :! pdflatex -output-directory %:h % && evince %:r.pdf 2>&1 >/dev/null &<CR><Space>
 
 " Define shortcuts for window splitting.
 nnoremap <Leader>v :vsplit<Space>
