@@ -48,6 +48,13 @@ set laststatus=2
 set relativenumber
 " Save persistent undo history in a file.
 set undofile
+" Define global undo directory instead of cluttering the cwd
+" Note the second slash at the end of the path. This way equally named files
+" from different directories don't make problems
+if isdirectory($HOME . '/.vim/undo') == 0
+	:silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
+endif
+set undodir=~/.vim/undo//
 
 " Define ',' for custom mappings.
 let mapleader = ","
