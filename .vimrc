@@ -1,5 +1,7 @@
 " Set runtime for pathogen as a submodule
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+runtime bundle/pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
 " make Vim use Vim defaults, not Vi.
 set nocompatible
 
@@ -140,7 +142,6 @@ let g:tex_flavor='latex'
 inoremap <Nul> <C-x><C-o>
 
 " Integrate plugin bundles.
-execute pathogen#infect()
 
 " Remap command from latex-suite so <C-j> will work again
 nnoremap <SID>Anything_maybe_change_it <Plug>IMAP_JumpForward
