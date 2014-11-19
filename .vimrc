@@ -1,3 +1,5 @@
+" Set runtime for pathogen as a submodule
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 " make Vim use Vim defaults, not Vi.
 set nocompatible
 
