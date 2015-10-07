@@ -154,6 +154,9 @@ let g:syntastic_check_on_open=1
 " Use jshint as syntax checker for Javascript.
 let g:syntastic_javascript_checkers=['jshint']
 
+" Abbreviations for Handlebars
+let g:mustache_abbreviations=1
+
 " Use robokai as colorscheme. This is a terminal version of molokai.
 colorscheme robokai
 " Style the highlighting for the cursorline more nicely.

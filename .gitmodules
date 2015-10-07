@@ -19,6 +19,12 @@
 [submodule ".vim/bundle/matchit"]
 	path = .vim/bundle/matchit
 	url = https://github.com/estefanions/matchit.git
+[submodule ".vim/bundle/mustache"]
+	path = .vim/bundle/mustache
+	url = git://github.com/mustache/vim-mustache-handlebars.git
 [submodule ".vim/bundle/vim-latex"]
 	path = .vim/bundle/vim-latex
 	url = https://github.com/vim-latex/vim-latex.git
+[submodule ".vim/bundle/rust.vim"]
+	path = .vim/bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
