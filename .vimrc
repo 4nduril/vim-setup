@@ -126,6 +126,9 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
+" Set HTML FileType for EJS templates.
+autocmd BufRead,BufNewFile *.ejs setfiletype html
+
 " Enable auto completion features for specific languages on file type base.
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
