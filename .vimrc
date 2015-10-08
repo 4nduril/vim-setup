@@ -152,7 +152,14 @@ nnoremap <SID>Anything_maybe_change_it <Plug>IMAP_JumpForward
 " Make syntastic plugin check files on opening and saving.
 let g:syntastic_check_on_open=1
 " Use jshint as syntax checker for Javascript.
-let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_javascript_checkers=['eslint']
+" Recommended Syntastic settings
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_wq=0
 
 " Abbreviations for Handlebars
 let g:mustache_abbreviations=1
