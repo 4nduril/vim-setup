@@ -136,6 +136,12 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType less set omnifunc=csscomplete#CompleteCSS
 
+" Auto closing of braces
+inoremap {      {}<Left>
+inoremap {<CR>  {<CR>}<Esc>O
+inoremap {{     {
+inoremap {}     {}
+
 " Setting for Latex-Suite
 filetype plugin on
 set grepprg=grep\ -nH\ $*
