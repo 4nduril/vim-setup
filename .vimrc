@@ -132,7 +132,8 @@ autocmd BufRead,BufNewFile *.ejs setfiletype html
 " Enable auto completion features for specific languages on file type base.
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+"autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType javascript setlocal omnifunc=tern#complete
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType less set omnifunc=csscomplete#CompleteCSS
 
@@ -169,6 +170,10 @@ let g:syntastic_check_on_wq=0
 
 " Abbreviations for Handlebars
 let g:mustache_abbreviations=1
+
+" YCM options
+let g:ycm_path_to_python_interpreter='/usr/bin/python2'
+set completeopt-=preview
 
 " Use robokai as colorscheme. This is a terminal version of molokai.
 colorscheme robokai
