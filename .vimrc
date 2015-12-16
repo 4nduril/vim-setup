@@ -82,7 +82,7 @@ set showmatch
 set wrap
 
 " Enable spellchecking. Set spelllang according to your language.
-set spell 
+"set spell 
 set spelllang=de
 
 " Enable syntax checking
@@ -128,6 +128,7 @@ nnoremap <C-l> <C-w>l
 
 " Set HTML FileType for EJS templates.
 autocmd BufRead,BufNewFile *.ejs setfiletype html
+autocmd BufRead,BufNewFile *.dust setfiletype html
 
 " Enable auto completion features for specific languages on file type base.
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -179,3 +180,20 @@ set completeopt-=preview
 colorscheme robokai
 " Style the highlighting for the cursorline more nicely.
 hi CursorLine cterm=NONE ctermbg=DarkGray
+
+" Ban swp and so on
+set undodir=~/.vim/.undo//
+set backupdir=~/.vim/.backup//
+set directory=~/.vim/.swp//
+
+" NERDtree
+nnoremap <Leader>n :NERDTreeToggle<CR>
+
+" CtrlP
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+    \ --ignore .git
+    \ -g ""'
+
+" Ag – The silver searcher
+nnoremap <Leader>a :Ag 
+let g:ag_working_path_mode="r"
