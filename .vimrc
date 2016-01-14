@@ -197,3 +197,6 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 " Ag – The silver searcher
 nnoremap <Leader>a :Ag 
 let g:ag_working_path_mode="r"
+
+nnoremap <Leader>e :lnext<cr>
+nnoremap <Leader>E :lprevious<cr>
