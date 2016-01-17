@@ -16,9 +16,6 @@
 [submodule ".vim/bundle/vim-less"]
 	path = .vim/bundle/vim-less
 	url = https://github.com/groenewege/vim-less
-[submodule ".vim/bundle/matchit"]
-	path = .vim/bundle/matchit
-	url = https://github.com/estefanions/matchit.git
 [submodule ".vim/bundle/mustache"]
 	path = .vim/bundle/mustache
 	url = git://github.com/mustache/vim-mustache-handlebars.git
