@@ -181,6 +181,10 @@ colorscheme robokai
 " Style the highlighting for the cursorline more nicely.
 hi CursorLine cterm=NONE ctermbg=DarkGray
 
+" Indent Guide
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+
 " Ban swp and so on
 set undodir=~/.vim/.undo//
 set backupdir=~/.vim/.backup//
