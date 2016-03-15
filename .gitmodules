@@ -52,3 +52,6 @@
 [submodule ".vim/bundle/vim-babel"]
 	path = .vim/bundle/vim-babel
 	url = https://github.com/jbgutierrez/vim-babel.git
+[submodule "matchit"]
+	path = .vim/bundle/matchit
+	url = https://github.com/vim-scripts/matchit.zip.git
