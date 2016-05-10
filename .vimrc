@@ -130,6 +130,9 @@ nnoremap <C-l> <C-w>l
 autocmd BufRead,BufNewFile *.ejs setfiletype html
 autocmd BufRead,BufNewFile *.dust setfiletype html
 
+" Set JSON FileType
+autocmd BufRead,BufNewFile *.json setfiletype json
+
 " Enable auto completion features for specific languages on file type base.
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
@@ -177,7 +180,8 @@ let g:ycm_path_to_python_interpreter='/usr/bin/python2'
 set completeopt-=preview
 
 " Use robokai as colorscheme. This is a terminal version of molokai.
-colorscheme robokai
+"colorscheme robokai
+colorscheme molokai
 " Style the highlighting for the cursorline more nicely.
 hi CursorLine cterm=NONE ctermbg=DarkGray
 
@@ -204,3 +208,5 @@ let g:ag_working_path_mode="r"
 
 nnoremap <Leader>e :lnext<cr>
 nnoremap <Leader>E :lprevious<cr>
+
+set t_Co=256
