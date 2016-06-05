@@ -39,6 +39,8 @@ set wildmode=list:longest
 
 " Highlights the line on which the cursor is.
 set cursorline
+" Set symbols for tab and eol
+set list lcs=tab:\·\ ,eol:¬
 " We have a fast terminal connection.
 set ttyfast
 " Show current corsor position: line and column.
@@ -183,7 +185,7 @@ set completeopt-=preview
 "colorscheme robokai
 colorscheme molokai
 " Style the highlighting for the cursorline more nicely.
-hi CursorLine cterm=NONE ctermbg=DarkGray
+"hi CursorLine cterm=NONE ctermbg=DarkGray
 
 " Indent Guide
 let g:indent_guides_enable_on_vim_startup = 1
