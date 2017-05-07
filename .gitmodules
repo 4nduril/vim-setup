@@ -40,6 +40,3 @@
 [submodule "matchit"]
 	path = .vim/bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
-[submodule ".vim/bundle/YCM"]
-	path = .vim/bundle/YCM
-	url = https://github.com/Valloric/YouCompleteMe.git
