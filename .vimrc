@@ -178,7 +178,7 @@ let g:syntastic_check_on_wq=0
 let g:mustache_abbreviations=1
 
 " YCM options
-let g:ycm_path_to_python_interpreter='/usr/bin/python2'
+let g:ycm_path_to_python_interpreter='/usr/bin/python3'
 set completeopt-=preview
 
 " Use robokai as colorscheme. This is a terminal version of molokai.
@@ -188,7 +188,7 @@ colorscheme molokai
 "hi CursorLine cterm=NONE ctermbg=DarkGray
 
 " Indent Guide
-let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_enable_on_vim_startup = 0
 let g:indent_guides_guide_size = 1
 
 " Ban swp and so on
@@ -198,6 +198,7 @@ set directory=~/.vim/.swp//
 
 " NERDtree
 nnoremap <Leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>nf :NERDTreeFind<CR>
 
 " CtrlP
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
