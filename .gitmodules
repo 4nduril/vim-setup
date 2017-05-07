@@ -22,9 +22,6 @@
 [submodule ".vim/bundle/rust.vim"]
 	path = .vim/bundle/rust.vim
 	url = https://github.com/rust-lang/rust.vim.git
-[submodule ".vim/bundle/tern_for_vim"]
-	path = .vim/bundle/tern_for_vim
-	url = https://github.com/marijnh/tern_for_vim.git
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -40,12 +37,6 @@
 [submodule ".vim/bundle/indent-guides"]
 	path = .vim/bundle/indent-guides
 	url = https://github.com/vim-scripts/Indent-Guides.git
-[submodule ".vim/bundle/webapi-vim"]
-	path = .vim/bundle/webapi-vim
-	url = https://github.com/mattn/webapi-vim.git
-[submodule ".vim/bundle/vim-babel"]
-	path = .vim/bundle/vim-babel
-	url = https://github.com/jbgutierrez/vim-babel.git
 [submodule "matchit"]
 	path = .vim/bundle/matchit
 	url = https://github.com/vim-scripts/matchit.zip.git
