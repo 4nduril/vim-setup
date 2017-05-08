@@ -193,6 +193,10 @@ colorscheme molokai
 " Style the highlighting for the cursorline more nicely.
 "hi CursorLine cterm=NONE ctermbg=DarkGray
 
+
+" Use jsx highlighting in *.js files
+let g:jsx_ext_required = 0
+
 " Indent Guide
 let g:indent_guides_enable_on_vim_startup = 0
 let g:indent_guides_guide_size = 1
