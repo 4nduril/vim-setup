@@ -57,10 +57,10 @@ set undofile
 " Define global undo directory instead of cluttering the cwd
 " Note the second slash at the end of the path. This way equally named files
 " from different directories don't make problems
-if isdirectory($HOME . '/.vim/undo') == 0
-	:silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
-endif
-set undodir=~/.vim/undo//
+" if isdirectory($HOME . '/.vim/undo') == 0
+" 	:silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
+" endif
+" set undodir=~/.vim/undo//
 
 " Define ',' for custom mappings.
 let mapleader = ","
@@ -139,7 +139,7 @@ autocmd BufRead,BufNewFile *.json setfiletype json
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
-autocmd FileType javascript setlocal omnifunc=tern#complete
+"autocmd FileType javascript setlocal omnifunc=tern#complete
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType less set omnifunc=csscomplete#CompleteCSS
 
@@ -148,6 +148,12 @@ inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
 inoremap {{     {
 inoremap {}     {}
+
+" Auto closing of parens
+inoremap (      ()<Left>
+inoremap (<CR>  (<CR>)<Esc>O
+inoremap ((     (
+inoremap ()     ()
 
 " Setting for Latex-Suite
 filetype plugin on
@@ -192,9 +198,9 @@ let g:indent_guides_enable_on_vim_startup = 0
 let g:indent_guides_guide_size = 1
 
 " Ban swp and so on
-set undodir=~/.vim/.undo//
-set backupdir=~/.vim/.backup//
-set directory=~/.vim/.swp//
+set undodir=~/.vim_bkp-files/.undo//
+set backupdir=~/.vim_bkp-files/.backup//
+set directory=~/.vim_bkp-files/.swp//
 
 " NERDtree
 nnoremap <Leader>n :NERDTreeToggle<CR>
