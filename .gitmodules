@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/YCM"]
 	path = .vim/bundle/YCM
 	url = https://github.com/Valloric/YouCompleteMe.git
+[submodule ".vim/bundle/vim-javascript"]
+	path = .vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
