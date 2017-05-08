@@ -210,6 +210,9 @@ set directory=~/.vim_bkp-files/.swp//
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>nf :NERDTreeFind<CR>
 
+" NERDCommenter
+let g:NERDSpaceDelims = 1
+
 " CtrlP
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
     \ --ignore .git
