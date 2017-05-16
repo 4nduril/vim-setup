@@ -189,7 +189,13 @@ set completeopt-=preview
 
 " Use robokai as colorscheme. This is a terminal version of molokai.
 "colorscheme robokai
-colorscheme molokai
+if has("termguicolors")
+	let &t_8f = "[38;2;%lu;%lu;%lum"
+	let &t_8b = "[48;2;%lu;%lu;%lum"
+	set termguicolors
+endif
+colorscheme gruvbox
+set background=dark
 " Style the highlighting for the cursorline more nicely.
 "hi CursorLine cterm=NONE ctermbg=DarkGray
 
