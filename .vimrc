@@ -181,18 +181,11 @@ inoremap <Nul> <C-x><C-o>
 " Remap command from latex-suite so <C-j> will work again
 nnoremap <SID>Anything_maybe_change_it <Plug>IMAP_JumpForward
 
-" Make sure syntastic plugin does not check files on opening
-let g:syntastic_check_on_open=0
-" Use eslint as syntax checker for Javascript.
-let g:syntastic_javascript_checkers=['eslint']
-" Recommended Syntastic settings
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=2
-let g:syntastic_loc_list_height=6
-let g:syntastic_check_on_wq=0
+" ALE options
+let g:ale_list_window_size=4
+let g:ale_open_list=1
+" let g:ale_lint_on_text_changed=0
+" let g:ale_lint_on_insert_leave=1
 
 " Abbreviations for Handlebars
 let g:mustache_abbreviations=1
