@@ -5,6 +5,9 @@ execute pathogen#infect()
 " make Vim use Vim defaults, not Vi.
 set nocompatible
 
+" We have 256 colors
+set t_Co=256
+
 " Copy indent from current line when starting a new line.
 set autoindent
 
@@ -60,7 +63,10 @@ set undofile
 " if isdirectory($HOME . '/.vim/undo') == 0
 " 	:silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
 " endif
-" set undodir=~/.vim/undo//
+set undodir=~/.vim_bkp-files/.undo//
+set backupdir=~/.vim_bkp-files/.backup//
+set directory=~/.vim_bkp-files/.swp//
+
 
 " Define ',' for custom mappings.
 let mapleader = ","
@@ -87,6 +93,9 @@ set wrap
 "set spell 
 set spelllang=de
 
+" Enable mouse events
+set mouse=a
+
 " Enable syntax checking
 syntax on
 
@@ -100,20 +109,20 @@ inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
 " Move by screen lines not by file lines.
-nnoremap j gj
-nnoremap k gk
+" nnoremap j gj
+" nnoremap k gk
 
 " Define shortcuts for invoking external programs.
 " Invoke uglifyjs on current file, mangle names on toplevel and save as
 "	*.min.js.
-nnoremap <Leader>u :! uglifyjs % -m toplevel -o %:r.min.js<CR><Space>
+" nnoremap <Leader>u :! uglifyjs % -m toplevel -o %:r.min.js<CR><Space>
 " Save the current file and invoke lessc on it, all in one step.
-nnoremap <Leader>w :w <Bar> !lessc % > %:r.css<CR><Space>
+" nnoremap <Leader>w :w <Bar> !lessc % > %:r.css<CR><Space>
 " Open current file in Firefox or Chrome.
-nnoremap <Leader>ff :! firefox %<CR><Space>
-nnoremap <Leader>gc :! google-chrome %<CR><Space>
+" nnoremap <Leader>ff :! firefox %<CR><Space>
+" nnoremap <Leader>gc :! google-chrome %<CR><Space>
 " Compile current LaTeX file in its own directory
-nnoremap <Leader>p :! pdflatex -output-directory %:h %
+nnoremap <Leader>p :! pdflatex -output-directory %:h %<CR><Space>
 
 " Define shortcuts for window splitting.
 nnoremap <Leader>v :vsplit<Space>
@@ -128,7 +137,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
-" Set HTML FileType for EJS templates.
+" Set HTML FileType for EJS and Dust templates.
 autocmd BufRead,BufNewFile *.ejs setfiletype html
 autocmd BufRead,BufNewFile *.dust setfiletype html
 
@@ -138,6 +147,7 @@ autocmd BufRead,BufNewFile *.json setfiletype json
 " Enable auto completion features for specific languages on file type base.
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+"Done by Tern
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 "autocmd FileType javascript setlocal omnifunc=tern#complete
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
@@ -155,6 +165,9 @@ inoremap (<CR>  (<CR>)<Esc>O
 inoremap ((     (
 inoremap ()     ()
 
+" Wrapping one word in parentheses
+nnoremap <Leader>( bi(<Esc>ea)<Esc>
+
 " Setting for Latex-Suite
 filetype plugin on
 set grepprg=grep\ -nH\ $*
@@ -168,16 +181,17 @@ inoremap <Nul> <C-x><C-o>
 " Remap command from latex-suite so <C-j> will work again
 nnoremap <SID>Anything_maybe_change_it <Plug>IMAP_JumpForward
 
-" Make syntastic plugin check files on opening and saving.
-let g:syntastic_check_on_open=1
-" Use jshint as syntax checker for Javascript.
+" Make sure syntastic plugin does not check files on opening
+let g:syntastic_check_on_open=0
+" Use eslint as syntax checker for Javascript.
 let g:syntastic_javascript_checkers=['eslint']
 " Recommended Syntastic settings
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
 "set statusline+=%*
 let g:syntastic_always_populate_loc_list=1
-"let g:syntastic_auto_loc_list=1
+let g:syntastic_auto_loc_list=2
+let g:syntastic_loc_list_height=6
 let g:syntastic_check_on_wq=0
 
 " Abbreviations for Handlebars
@@ -187,7 +201,7 @@ let g:mustache_abbreviations=1
 let g:ycm_path_to_python_interpreter='/usr/bin/python3'
 set completeopt-=preview
 
-" Use robokai as colorscheme. This is a terminal version of molokai.
+" set colors
 "colorscheme robokai
 if has("termguicolors")
 	let &t_8f = "[38;2;%lu;%lu;%lum"
@@ -207,11 +221,6 @@ let g:jsx_ext_required = 0
 let g:indent_guides_enable_on_vim_startup = 0
 let g:indent_guides_guide_size = 1
 
-" Ban swp and so on
-set undodir=~/.vim_bkp-files/.undo//
-set backupdir=~/.vim_bkp-files/.backup//
-set directory=~/.vim_bkp-files/.swp//
-
 " NERDtree
 nnoremap <Leader>n :NERDTreeToggle<CR>
 nnoremap <Leader>nf :NERDTreeFind<CR>
@@ -228,7 +237,6 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
 nnoremap <Leader>a :Ag 
 let g:ag_working_path_mode="r"
 
+" Jump to errors
 nnoremap <Leader>e :lnext<cr>
 nnoremap <Leader>E :lprevious<cr>
-
-set t_Co=256
