@@ -192,6 +192,9 @@ let g:mustache_abbreviations=1
 
 " YCM options
 let g:ycm_path_to_python_interpreter='/usr/bin/python3'
+let g:ycm_semantic_triggers = {
+	\ 'elm' : ['.'],
+	\}
 set completeopt-=preview
 
 " set colors
