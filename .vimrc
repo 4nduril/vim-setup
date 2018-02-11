@@ -72,8 +72,8 @@ set directory=~/.vim_bkp-files/.swp//
 let mapleader = ","
 
 " Prepend all searches with the option \v which enables Perl regexps.
-nnoremap / /\v
-vnoremap / /\v
+"nnoremap / /\v
+"vnoremap / /\v
 " Highlight search matches and find them while typing.
 set hlsearch
 set incsearch
@@ -143,6 +143,9 @@ autocmd BufRead,BufNewFile *.dust setfiletype html
 
 " Set JSON FileType
 autocmd BufRead,BufNewFile *.json setfiletype json
+
+" Set Vue FileType
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
 " Enable auto completion features for specific languages on file type base.
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -225,13 +228,14 @@ nnoremap <Leader>nf :NERDTreeFind<CR>
 let g:NERDSpaceDelims = 1
 
 " CtrlP
+let g:ctrlp_root_markers = ['package.json']
 let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
     \ --ignore .git
     \ -g ""'
 
 " Ag – The silver searcher
 nnoremap <Leader>a :Ag 
-let g:ag_working_path_mode="r"
+"let g:ag_working_path_mode="r"
 
 " Jump to errors
 nnoremap <Leader>e :lnext<cr>

@@ -58,3 +58,9 @@
 [submodule ".vim/bundle/elm-vim"]
 	path = .vim/bundle/elm-vim
 	url = https://github.com/elmcast/elm-vim.git
+[submodule ".vim/bundle/vim-twig"]
+	path = .vim/bundle/vim-twig
+	url = https://github.com/lumiliet/vim-twig.git
+[submodule ".vim/bundle/json5-vim"]
+	path = .vim/bundle/json5-vim
+	url = https://github.com/GutenYe/json5.vim
