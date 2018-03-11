@@ -64,3 +64,6 @@
 [submodule ".vim/bundle/json5-vim"]
 	path = .vim/bundle/json5-vim
 	url = https://github.com/GutenYe/json5.vim
+[submodule ".vim/bundle/vim-a-styled-jsx"]
+	path = .vim/bundle/vim-a-styled-jsx
+	url = https://github.com/alampros/vim-styled-jsx.git
