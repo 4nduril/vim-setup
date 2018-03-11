@@ -240,3 +240,6 @@ nnoremap <Leader>a :Ag
 " Jump to errors
 nnoremap <Leader>e :lnext<cr>
 nnoremap <Leader>E :lprevious<cr>
+
+" airline options
+let g:airline_powerline_fonts = 1

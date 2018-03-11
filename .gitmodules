@@ -67,3 +67,6 @@
 [submodule ".vim/bundle/vim-a-styled-jsx"]
 	path = .vim/bundle/vim-a-styled-jsx
 	url = https://github.com/alampros/vim-styled-jsx.git
+[submodule ".vim/bundle/vim-airline"]
+	path = .vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
